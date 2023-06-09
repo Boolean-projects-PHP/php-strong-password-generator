@@ -21,26 +21,33 @@ include_once __DIR__ . '/function.php'
     <form action="" method="get">
 
 
-        <div class="container">
+        <div class="container d-flex flex-column align-items-center my-4 pb-4 px-4 rounded-3"
+            style=" border: 1px solid black; background-color: #0079FF">
             <h1>Strong Password Generator</h1>
             <h2>Genera una password sicura</h2>
-            <div>
-                <p>Lunghezza password:</p>
-                <input class=" mb-2 w-50" type="text" name="number">
-                <p class="mt-1">Password generata:</p>
-                <div class="w-50 mt-1 p-3" style="border: 1px solid black;">
-                    <?php echo generaStringaRandom($stringlenght); ?>
+
+            <div class="bg-black text-light w-100 px-4 rounded-3">
+                <div class="mt-3">
+                    <p>Lunghezza password:</p>
+                    <input class=" mb-2 w-25" type="text" name="number">
+                    <p class="mt-1">Password generata:</p>
+                    <div class="w-50 my-2 p-3" style="border: 1px solid white;">
+                        <?php echo generaStringaRandom($stringlenght); ?>
+                    </div>
+                </div>
+                <div class="mb-3 d-flex flex-column align-items-start">
+
+                    <p>Consenti ripetizioni di uno o più caratteri:</p>
+                    <div><input type="radio" name="" id=""><span class="px-1">Sì</span></div>
+                    <div><input type="radio" name="" id=""><span class="px-1">No</span></div>
+
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary">Genera</button>
+                    <button type="button" class="btn btn-light">Annulla</button>
                 </div>
             </div>
-            <div class="mb-3">
-                <p>Consenti ripetizioni di uno o più caratteri:</p>
-                <input type="radio" name="" id=""><span class="px-1">Sì</span>
-                <input type="radio" name="" id=""><span class="px-1">No</span>
-            </div>
-            <div>
-                <button type="button" class="btn btn-primary">Genera</button>
-                <button class="px-2 button_two" type="reset">Annulla</button>
-            </div>
+
 
 
 
