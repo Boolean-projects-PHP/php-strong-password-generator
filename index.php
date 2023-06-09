@@ -1,4 +1,9 @@
+<?php
+include_once __DIR__ . '/function.php'
+    ?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -20,17 +25,21 @@
             <h1>Strong Password Generator</h1>
             <h2>Genera una password sicura</h2>
             <div>
-                <p>Lunghezza passowrd:</p>
-                <input type="text">
+                <p>Lunghezza password:</p>
+                <input class=" mb-2 w-50" type="text" name="number">
+                <p class="mt-1">Password generata:</p>
+                <div class="w-50 mt-1 p-3" style="border: 1px solid black;">
+                    <?php echo generaStringaRandom($stringlenght); ?>
+                </div>
             </div>
-            <div>
+            <div class="mb-3">
                 <p>Consenti ripetizioni di uno o più caratteri:</p>
-                <input type="radio" name="" id=""><span>Sì</span>
-                <input type="radio" name="" id=""><span>No</span>
+                <input type="radio" name="" id=""><span class="px-1">Sì</span>
+                <input type="radio" name="" id=""><span class="px-1">No</span>
             </div>
             <div>
-                <button>Invia</button>
-                <button>Annulla</button>
+                <button type="button" class="btn btn-primary">Genera</button>
+                <button class="px-2 button_two" type="reset">Annulla</button>
             </div>
 
 
